@@ -1,0 +1,36 @@
+name: Deploy to Prod
+
+on:
+  push:
+    branches:
+       - main
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout main branch
+        uses: actions/checkout@v2
+
+      - name: Setup node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: 14
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Build application
+        run: npm run build
+
+      - name: Deploy to prod
+        uses: ErenKrt/ssh-push@1.0
+        with:
+          HOST: ${{secrets.SERVER_HOST}}
+          PORT: ${{secrets.SSH_PORT}}
+          USERNAME: ${{secrets.SERVER_USERNAME}}
+          PRIVATE_KEY: ${{secrets.SSH_PRIVATE_KEY}}
+          SOURCE: /build/*
+          OUTDIR: /etc/projects/reasonstoswallow/
+          
+          
