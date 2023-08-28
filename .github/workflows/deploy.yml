@@ -27,14 +27,14 @@ jobs:
         run: ls -a -R $GITHUB_WORKSPACE
 
       - name: Deploy to prod
-        uses: TwanLuttik/gh-action-scp@1.0.1
+        uses: mschmitt/rsync-with-ssh-agent@49f36eb07a49df1ef6e504491276f078513e9ab8
         with:
-          host: ${{secrets.SERVER_HOST}}
-          port: ${{secrets.SSH_PORT}}
+          SSH_HOST: ${{secrets.SERVER_HOST}}
+          SSH_PORT: ${{secrets.SSH_PORT}}
           username: ${{secrets.SERVER_USERNAME}}
-          privateKey: ${{secrets.SSH_PRIVATE_KEY}}
-          passphrase: ${{secrets.SSH_PASSPHRASE}}
-          local: $GITHUB_WORKSPACE/home/runner/work/reasonstoswallow-fe/reasonstoswallow-fe/build/
-          remote: /etc/projects/reasonstoswallow/
+          SSH_KEY: ${{secrets.SSH_PRIVATE_KEY}}
+          SSH_PASSPHRASE: ${{secrets.SSH_PASSPHRASE}}
+          RSYNC_LOCAL_PATH: $GITHUB_WORKSPACE/home/runner/work/reasonstoswallow-fe/reasonstoswallow-fe/build/
+          RSYNC_REMOTE_PATH: /etc/projects/reasonstoswallow/
           
           
