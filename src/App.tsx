@@ -7,7 +7,7 @@ function App() {
     <div className="App">
       
       <header className="App-header">
-      <img src= {logo}/>
+      <img src= {logo} alt="swallow"/>
         <p>
           Reasons to swallow: here we go!
         </p>
