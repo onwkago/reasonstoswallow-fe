@@ -34,7 +34,7 @@ jobs:
           username: ${{secrets.SERVER_USERNAME}}
           privateKey: ${{secrets.SSH_PRIVATE_KEY}}
           passphrase: ${{secrets.SSH_PASSPHRASE}}
-          local: $GITHUB_WORKSPACE/home/runner/work/reasonstoswallow-fe/reasonstoswallow-fe/build/*
+          local: $GITHUB_WORKSPACE/home/runner/work/reasonstoswallow-fe/reasonstoswallow-fe/build/
           remote: /etc/projects/reasonstoswallow/
           
           
