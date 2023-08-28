@@ -24,13 +24,14 @@ jobs:
         run: npm run build
 
       - name: Deploy to prod
-        uses: ErenKrt/ssh-push@1.0
+        uses: TwanLuttik/gh-action-scp@1.0.1
         with:
-          HOST: ${{secrets.SERVER_HOST}}
-          PORT: ${{secrets.SSH_PORT}}
-          USERNAME: ${{secrets.SERVER_USERNAME}}
-          PRIVATE_KEY: ${{secrets.SSH_PRIVATE_KEY}}
-          SOURCE: /build/*
-          OUTDIR: /etc/projects/reasonstoswallow/
+          host: ${{secrets.SERVER_HOST}}
+          port: ${{secrets.SSH_PORT}}
+          username: ${{secrets.SERVER_USERNAME}}
+          privateKey: ${{secrets.SSH_PRIVATE_KEY}}
+          passphrase: ${{secrets.SSH_PASSPHRASE}}
+          local: /build/*
+          remote: /etc/projects/reasonstoswallow/
           
           
