@@ -23,14 +23,18 @@ jobs:
       - name: Build application
         run: npm run build
 
+      - name: Copy Build Files
+        run: ls -a -R $GITHUB_WORKSPACE
+
       - name: Deploy to prod
-        uses: ErenKrt/ssh-push@1.0
+        uses: mschmitt/rsync-with-ssh-agent@49f36eb07a49df1ef6e504491276f078513e9ab8
         with:
-          HOST: ${{secrets.SERVER_HOST}}
-          PORT: ${{secrets.SSH_PORT}}
-          USERNAME: ${{secrets.SERVER_USERNAME}}
-          PRIVATE_KEY: ${{secrets.SSH_PRIVATE_KEY}}
-          SOURCE: /build/*
-          OUTDIR: /etc/projects/reasonstoswallow/
+          SSH_HOST: ${{secrets.SERVER_HOST}}
+          SSH_PORT: ${{secrets.SSH_PORT}}
+          SSH_USER: ${{secrets.SERVER_USERNAME}}
+          SSH_KEY: ${{secrets.SSH_PRIVATE_KEY}}
+          SSH_PASSPHRASE: ${{secrets.SSH_PASSPHRASE}}
+          RSYNC_LOCAL_PATH: $GITHUB_WORKSPACE/home/runner/work/reasonstoswallow-fe/reasonstoswallow-fe/build/
+          RSYNC_REMOTE_PATH: /etc/projects/reasonstoswallow/
           
           
