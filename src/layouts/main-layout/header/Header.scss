@@ -1,0 +1,29 @@
+.header {
+  height: 100px; /* Maintain the height */
+  background-color: #4a90e2; /* Matching the blue color used in the article title */
+  color: #fff; /* Text color set to white for contrast */
+  padding: 15px 0; /* Add padding for better spacing */
+  box-shadow: none; /* Remove the box shadow for simplicity */
+  display: flex;
+  flex-flow: row;
+  justify-content: space-around;
+}
+
+.header-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Update the styles for the h5 element */
+.header h5 {
+  font-size: 24px; /* Adjust the font size as needed */
+  margin: 0; /* Remove default margin to align the text properly */
+  color: inherit; /* Inherit the text color from the parent */
+}
+
+/* Styles for the logo image */
+.header-item img {
+  width: 120px; /* Maintain the image width */
+  height: 100px; /* Maintain the image height */
+}

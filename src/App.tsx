@@ -1,24 +1,15 @@
 import React from 'react';
 import logo from './static/swlw.jpg';
-import './App.css';
+import './App.scss';
+import MainLayout from "./layouts/main-layout/MainLayout";
+import ConvinceMe from "./pages/convince-me/ConvinceMe";
 
 function App() {
   return (
-    <div className="App">
-      
-      <header className="App-header">
-      <img src= {logo} alt="swallow"/>
-        <p>
-          Reasons to swallow: here we go!
-        </p>
-        <p>
-          Join the development!
-        </p>
-      </header>
-      <body>
-        <p> swallow for fun !</p>
-      </body>
-    </div>
+      <div className="App">
+        {/*<MainLayout />*/}
+        <ConvinceMe/>
+      </div>
   );
 }
 

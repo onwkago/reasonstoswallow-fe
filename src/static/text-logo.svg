@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="210mm"
+   height="297mm"
+   viewBox="0 0 210 297"
+   version="1.1"
+   id="svg1177"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs1174">
+    <rect
+       x="35.165753"
+       y="154.57474"
+       width="538.30653"
+       height="120.5683"
+       id="rect6346" />
+    <linearGradient
+       id="linearGradient2065">
+      <stop
+         style="stop-color:#000000;stop-opacity:1;"
+         offset="0"
+         id="stop2063" />
+    </linearGradient>
+    <rect
+       x="100.55678"
+       y="171.60233"
+       width="398.94808"
+       height="44.813342"
+       id="rect1235" />
+    <filter
+       style="color-interpolation-filters:sRGB;"
+       id="filter1297"
+       x="-0.031856286"
+       y="-0.51678659"
+       width="1.0637126"
+       height="2.0335732">
+      <feGaussianBlur
+         stdDeviation="5"
+         result="fbSourceGraphic"
+         id="feGaussianBlur1289" />
+      <feGaussianBlur
+         stdDeviation="0.01"
+         in="SourceGraphic"
+         result="result1"
+         id="feGaussianBlur1291" />
+      <feComposite
+         in2="result1"
+         operator="arithmetic"
+         in="fbSourceGraphic"
+         k2="0.5"
+         k3="0.5"
+         result="result2"
+         id="feComposite1293" />
+      <feBlend
+         in2="fbSourceGraphic"
+         mode="normal"
+         result="result3"
+         id="feBlend1295" />
+    </filter>
+    <filter
+       x="-0.047201087"
+       width="1.0944022"
+       y="-0.91991076"
+       height="2.8398215"
+       style="color-interpolation-filters:sRGB;"
+       id="filter19554">
+      <feGaussianBlur
+         stdDeviation="0.01 2.10454"
+         result="blur"
+         id="feGaussianBlur19538" />
+      <feComposite
+         in="SourceGraphic"
+         in2="blur"
+         operator="atop"
+         result="composite1"
+         id="feComposite19540" />
+      <feComposite
+         in2="composite1"
+         operator="in"
+         result="composite2"
+         id="feComposite19542" />
+      <feComposite
+         in2="composite2"
+         operator="in"
+         result="composite3"
+         id="feComposite19544" />
+      <feTurbulence
+         type="turbulence"
+         numOctaves="1"
+         seed="27"
+         baseFrequency="0.224833 0.351856"
+         result="turbulence"
+         id="feTurbulence19546" />
+      <feDisplacementMap
+         in="blur"
+         in2="turbulence"
+         xChannelSelector="R"
+         scale="3.49206"
+         yChannelSelector="G"
+         result="map"
+         id="feDisplacementMap19548" />
+      <feColorMatrix
+         values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 4.23453 -0 "
+         result="colormatrix"
+         id="feColorMatrix19550" />
+      <feComposite
+         in="composite3"
+         in2="colormatrix"
+         operator="over"
+         result="fbSourceGraphic"
+         id="feComposite19552" />
+      <feColorMatrix
+         result="fbSourceGraphicAlpha"
+         in="fbSourceGraphic"
+         values="0 0 0 -1 0 0 0 0 -1 0 0 0 0 -1 0 0 0 0 1 0"
+         id="feColorMatrix20688" />
+      <feGaussianBlur
+         id="feGaussianBlur20690"
+         in="fbSourceGraphic"
+         stdDeviation="6.5625"
+         result="blur" />
+      <feDiffuseLighting
+         id="feDiffuseLighting20692"
+         diffuseConstant="1"
+         surfaceScale="10"
+         lighting-color="rgb(169,23,193)"
+         result="diffuse">
+        <feDistantLight
+           id="feDistantLight20694"
+           elevation="204"
+           azimuth="133" />
+      </feDiffuseLighting>
+      <feComposite
+         in2="diffuse"
+         id="feComposite20696"
+         in="diffuse"
+         operator="arithmetic"
+         k1="1"
+         result="composite1" />
+      <feComposite
+         in2="fbSourceGraphic"
+         id="feComposite20698"
+         in="composite1"
+         k1="1"
+         operator="arithmetic"
+         k3="1"
+         result="composite2" />
+    </filter>
+  </defs>
+  <g
+     id="layer1">
+    <text
+       xml:space="preserve"
+       transform="scale(0.26458333)"
+       id="text6344"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:32px;font-family:Gadugi;-inkscape-font-specification:'Gadugi, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;white-space:pre;shape-inside:url(#rect6346);fill:#f700a9;fill-opacity:1;stroke:#ae009b;stroke-opacity:1;filter:url(#filter19554);stroke-width:1.00157481;stroke-dasharray:none;stroke-dashoffset:0;stroke-linecap:round;stroke-linejoin:bevel"><tspan
+         x="35.166016"
+         y="183.39836"
+         id="tspan29994">REASONS TO SWALLOW</tspan></text>
+  </g>
+</svg>
