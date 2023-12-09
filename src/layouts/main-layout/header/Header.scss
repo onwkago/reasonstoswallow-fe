@@ -1,9 +1,11 @@
+@import '../../../colors';
 .header {
   height: 100px; /* Maintain the height */
-  background-color: #4a90e2; /* Matching the blue color used in the article title */
-  color: #fff; /* Text color set to white for contrast */
+  background-color: $background-color; /* Matching the blue color used in the article title */
+  color: $text-color-inverted; /* Text color set to white for contrast */
   padding: 15px 0; /* Add padding for better spacing */
   box-shadow: none; /* Remove the box shadow for simplicity */
+  width: 90%;
   display: flex;
   flex-flow: row;
   justify-content: space-around;
@@ -15,11 +17,26 @@
   justify-content: center;
 }
 
-/* Update the styles for the h5 element */
 .header h5 {
-  font-size: 24px; /* Adjust the font size as needed */
+  font-family: 'Arial', sans-serif; /* Choose a suitable font-family */
+  font-size: 30px; /* Adjust the font size as needed */
+  font-weight: bold; /* Set font-weight to bold for emphasis */
   margin: 0; /* Remove default margin to align the text properly */
-  color: inherit; /* Inherit the text color from the parent */
+  padding: 50px 20px; /* Add padding for better spacing */
+  color: $text-color-inverted; /* Set text color */
+  text-transform: uppercase; /* Transform text to uppercase */
+  letter-spacing: 4px; /* Adjust letter spacing for better readability */
+  background: linear-gradient(45deg, $background-color, $background-color3); /* Change gradient on hover */
+  border-radius: 10px; /* Add rounded corners for a sleek look */
+  text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.6); /* Enhance text shadow on hover */
+  transition: transform 0.3s, text-shadow 0.3s, background 0.3s; /* Add smooth transition */
+
+}
+
+.header h5::after {
+  font-size: 20px; /* Adjust size of the symbol */
+  vertical-align: top; /* Align symbol to the top */
+  margin-left: 6px; /* Add space between text and symbol */
 }
 
 /* Styles for the logo image */

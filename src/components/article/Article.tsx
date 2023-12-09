@@ -1,32 +1,17 @@
-import React, {useEffect} from 'react';
-import './Article.scss';
-import getRandomArticle from "../../service/ArticleService";
+import React from 'react';
+import './Article.scss'; // Import your SCSS styles here
 
 export interface ArticleProps {
-    fact:string,
+    title: string,
+    description:string,
 }
-const Article: React.FC<ArticleProps> = ( props ) => {
-
-    const capitalizeFirstLetter = (string: string) => {
-        return string.charAt(0).toUpperCase() + string.slice(1);
-    };
-
-
-    const splitFact = props.fact.split('. ');
-    const articleTitle = capitalizeFirstLetter(splitFact[0]);
-    const articleDescription = splitFact[1];
-
+const Article:React.FC<ArticleProps> =({title, description}) => {
     return (
-        <div className="article-container">
-            <div className="article-content">
-                <h2 className="article-title">{articleTitle}</h2>
-                <p className="paragraph">
-                    {articleDescription}
-                </p>
-                <p className="fact">
-                    {props.fact}
-                </p>
-            </div>
+        <div className="benefits-container">
+            <h2 className="title">{title}</h2>
+            <p className="description">
+                {description}
+            </p>
         </div>
     );
 };
