@@ -2,9 +2,7 @@ import React, {useEffect, useState} from 'react';
 import getRandomArticle from "../../service/ArticleService";
 import Fact from "../../components/fact/Fact";
 import Body from "../../layouts/main-layout/body/Body";
-import Header from "../../layouts/main-layout/header/Header";
 import {Button} from "react-bootstrap";
-import Footer from "../../layouts/main-layout/footer/Footer";
 import Article from "../../components/article/Article";
 
 const ConvinceMe: React.FC = () => {

@@ -1,13 +1,7 @@
-import React, {useState} from 'react';
+import React from 'react';
 import './Burger-menu.scss';
 import {Link} from "react-router-dom";
 const BurgerMenu = () => {
-    const [isOpen, setIsOpen] = useState(false);
-
-    const toggleMenu = () => {
-        setIsOpen(!isOpen);
-    };
-
     return (
         <nav className="navbar">
             <div className="logo">

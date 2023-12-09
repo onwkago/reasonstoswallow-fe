@@ -1,7 +1,6 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
-import logo from './static/swlw.jpg';
 import './App.scss';
 import MainLayout from "./layouts/main-layout/MainLayout";
 import ConvinceMe from "./pages/convince-me/ConvinceMe";

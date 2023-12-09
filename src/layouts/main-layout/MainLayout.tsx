@@ -1,9 +1,5 @@
 import React, {ReactNode} from 'react';
-import logo from "../../static/swlw.jpg";
-import Header from "./header/Header";
-import Footer from "./footer/Footer";
 import Body from "./body/Body";
-import Fact from "../../components/fact/Fact";
 import Article from "../../components/article/Article";
 
 export interface LayoutProps {

@@ -1,6 +1,5 @@
-import React, {useEffect} from 'react';
+import React from 'react';
 import './Fact.scss';
-import getRandomArticle from "../../service/ArticleService";
 
 export interface ArticleProps {
     fact:string,
