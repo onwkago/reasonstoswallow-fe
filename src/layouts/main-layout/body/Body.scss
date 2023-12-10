@@ -3,8 +3,8 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-top: 40px; /* Adjust the top padding as needed */
+  justify-content: center;
+  padding: 40px 15%; 
   background-color: $background-color2; /* Background color for the body */
-  width: 90%; /* Set the width of the body */
-  margin: 0 auto; /* Center the body horizontally */
+  min-height: 80vh;
 }

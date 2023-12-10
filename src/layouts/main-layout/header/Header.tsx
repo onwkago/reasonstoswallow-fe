@@ -1,16 +1,20 @@
 import React from 'react';
-import './Header.scss';
-import logo from '../../../static/reasonstoswallowlogo.png';
+import {Link} from "react-router-dom";
 import BurgerMenu from '../../../components/menu/burger-menu/Burger-menu'
+import logo from '../../../static/reasonstoswallowlogo.png';
+import './Header.scss';
 
 const Header = () => (
-    <header className="header container-fluid">
+    <header className="header">
         <div className="header-item col-3">
             <BurgerMenu/>
         </div>
 
-        <div className="header-item col-3">
+        <div className="header-item col-3 logo">
+            <Link to="/" >
             <img  src={logo} alt="reasons to"/>
+            ReasonsToSwallow
+            </Link>
         </div>
     </header>
 

@@ -1,8 +1,17 @@
-$primary-color: #aec6cf;
-$secondary-color: #accfe8;
-$background-color: #7071E8;
-$background-color2: #ecf2ff;
-$background-color3: #f3f9ff;
+$pink-light-1: #fde4f2;
+$pink-light-2: #f9cee7;
+$pink-light-3: #f4b8da;
+$pink-4: #eea1cd;
+$pink-5: #e68bbe;
+
+$primary-color: $pink-4;
+$secondary-color: $pink-light-3;
+
+$background-color: 	$pink-5;
+$background-color2: $pink-light-2;
+$background-color3: $pink-light-1;
+
+
 $text-color: #333;
-$text-color-inverted: #000000;
-$text-color-title: $secondary-color;
+$text-color-inverted: #110b0f;
+$text-color-title: $pink-5;

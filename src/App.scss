@@ -31,11 +31,6 @@
   color: #d2d0d0;
 }
 
-.body-container {
-  display:flex;
-  justify-content: center;
-}
-
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
@@ -45,4 +40,17 @@
   }
 }
 
+.page {
+  background: rgb(244,184,218);
+  background: linear-gradient(0deg, rgba(244,184,218,1) 0%, rgba(253,228,242,1) 100%);
 
+  .content-wrapper {
+    width: 75%;
+    margin: 0 auto; 
+  }
+}
+
+
+button {
+  margin: 15px auto;
+}

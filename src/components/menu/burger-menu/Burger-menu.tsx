@@ -4,14 +4,13 @@ import {Link} from "react-router-dom";
 const BurgerMenu = () => {
     return (
         <nav className="navbar">
-            <div className="logo">
-                <Link to="/">ReasonsToSwallow</Link>
-            </div>
             <ul className="nav-links">
                 <li>
-                    <Link to="/convince-me">Convince Me</Link>
+                    <Link to="/">Home</Link>
                 </li>
-                {/* Add more navigation links as needed */}
+                <li>
+                    <Link to="/convince-me">Why should I?</Link>
+                </li>
             </ul>
         </nav>
     );

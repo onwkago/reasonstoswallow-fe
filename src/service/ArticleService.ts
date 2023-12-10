@@ -1,5 +1,3 @@
-
-
 const cumShotBenefits: string[]  = [
     "Cum swallowing: Enhance muscle repair and growth after exercise. They provide a convenient, portable protein solution.",
     "Amino acids in Cum Shots contribute to overall health and meet daily protein requirements. Regular consumption can optimize workout performance.",
@@ -84,9 +82,59 @@ const cumShotBenefits: string[]  = [
     // Add or modify facts as needed to align with the structure
 ];
 
-const getRandomArticle = ():string => {
-    const randomIndex = Math.floor(Math.random() * cumShotBenefits.length);
-    return cumShotBenefits[randomIndex];
+export const reasons: Reason[] = [
+	{ id: "1",  intro: "You should swallow because it...", title: "Makes your teeth whiter", },
+    { id: "2",  intro: "You should swallow because it...", title: "Makes your man happy", },
+    { id: "3",  intro: "You should swallow because it...", title: "Has loads of protein", },
+    { id: "4",  intro: "You should swallow because it...", title: "Increases  your metabolism", },
+    { id: "5",  intro: "You should swallow because it...", title: "Burns fat", },
+    { id: "6",  intro: "You should swallow because it...", title: "Prevents unwanted pregnancy", description: "Since you can not get pregnant via oral sex it is great substitute for vaginal sex." },
+    { id: "7",  intro: "You should swallow because...", title: "Less cleaning up", description: "Who likes cleaning all the mess up after heated moment ends? No one! So swallowing cum shot can be smart thing to do for those cozy cuddles afterwards."},
+    { id: "8",  intro: "You should swallow because it's...", title: "Great mid-day snack (at least calorie wise)", description: "In average there is only 15 calories in single cumshot, so if you're on diet it's great mid day-snack for your calories budget."},
+    { id: "9",  intro: "You should swallow because it...", title: "Improves mood", },
+    { id: "10",  intro: "You should swallow because...", title: "You're bored", },
+    { id: "11",  intro: "You should swallow because it...", title: "Helps fight cellulite", },
+    { id: "12",  intro: "You should swallow because it's...", title: "Great exercise", description: "These days a lot of uss works office/desk jobs which can lead to neck and shoulder pains. But a little bit of exercise helps you maintain your posture healthy"},
+    { id: "13",  intro: "You should swallow because it...", title: "Makes you look hot", description: "Loads of jaw muscles work while you please your SO, so over time these muscles strenghten. And that makes you even more beautiful."},
+    { id: "14",  intro: "You should swallow because it...", title: "Cures headache", },
+    { id: "15",  intro: "You should swallow because it...", title: "Relieves period cramps", },
+    { id: "16",  intro: "You should swallow because it's...", title: "Good for skin", description: "It can help you finally reach (or maintain) that bright acne-free skin you always dreamt about!"},
+    { id: "17",  intro: "You should swallow because...", title: "Regular use works as antidepresant", },
+    { id: "18",  intro: "You should swallow because it...", title: "Promotes anti-aging of cells", },
+    { id: "19",  intro: "You should swallow because...", title: "Your SO will owe you", description: "This reason can be good strategically. Maybe you want him to go with you to your parents? Or maybe clean whole house while you out with friends? Doesn't matter what is your master plan, but after great swallowing expierence he won't be able to say no!"}, 
+    { id: "20",  intro: "You should swallow because it...", title: "Might lead to engagement", description: "Maybe your skills bedazzle your man so much that he'll decide to keep you by his side for the rest of his life - and will pop the question."},
+    { id: "21",  intro: "You should swallow because it...", title: "Looks great on camera", },
+    { id: "22",  intro: "You should swallow because it...", title: "Might lead to extra income", description: "If you decide to become one of those webcam couples it might lead to extra income."},
+    { id: "23",  intro: "You should swallow because it...", title: "Improves memory - might help prevent alzhaimers", },
+    { id: "24",  intro: "You should swallow because it...", title: "Improves reaction time", },
+    { id: "25",  intro: "You should swallow because it...", title: "Reduces joint pain", },
+    { id: "26",  intro: "You should swallow because it...", title: "Helps growth of muscles", description: "Since semen has a lot of proteins, paired with a little bit of excercise (and yes, sexual activity also counts) it will help you get fitter." },
+    { id: "27",  intro: "You should swallow because it's...", title: "Slimming", description: "Semen helps burn calories" },
+    { id: "28",  intro: "You should swallow because it...", title: "Tightens skin", },
+    { id: "29",  intro: "You should swallow because it...", title: "Boosts confidence", },
+    { id: "30",  intro: "You should swallow because it...", title: "Looks hot", },
+    { id: "31",  intro: "You should swallow because it...", title: "Prevents wrinkles", },
+    { id: "32",  intro: "You should swallow because it...", title: "Can help stop bolding", },
+    { id: "33",  intro: "You should swallow because it...", title: "Improves your hair", },
+    { id: "34",  intro: "You should swallow because it...", title: "Helps you sleep better", },
+    { id: "35",  intro: "You should swallow because it...", title: "Helps you relax", },
+    { id: "36",  intro: "You should swallow because...", title: "You can take semen instead of xanax", description: "Although semen doesnt include alprazolam (xanax) in it, but it has same effect as xanax. So, if you feel nervous or panicky - go for cum shot instead of pill!" },
+    { id: "37",  intro: "You should swallow because it...", title: "Has a lot of vitamins", },
+    { id: "38",  intro: "You should swallow because it...", title: "Prevents heart diseases", },
+    { id: "39", intro: "You should swallow because...", title: "You love him", description: "Without a doubt - your man will enjoy your desire to please him. And this is a good way of showing him your love / affection / etc."}
+];
+
+export type Reason = {
+    id: string,
+    title: string;
+    intro: string;
+    description?: string;
+    img?: string;
+}
+
+const getRandomArticle = ():Reason => {
+    const randomIndex = Math.floor(Math.random() * reasons.length);
+    return reasons[randomIndex];
 }
 
 export default getRandomArticle;
