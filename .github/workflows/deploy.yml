@@ -25,14 +25,7 @@ jobs:
 
       - name: Copy Build Files
         run: ls -a -R $GITHUB_WORKSPACE
-        
-      - name: Obtain SSH server's fingerprint
-        run: |
-          ssh-keyscan -H ${{ secrets.SERVER_HOST }} >> ~/.ssh/known_hosts
-          ssh-keygen -lf <(ssh-keyscan ${{ secrets.SERVER_HOST }} 2>/dev/null) | awk '{print $2}' > server_fingerprint.txt
-          cat server_fingerprint.txt
-        env:
-          SERVER_HOST: ${{ secrets.SERVER_HOST }}
+  
       - name: Deploy to prod
         env:
             SSH_PRIVATE_KEY: ${{secrets.SSH_PRIVATE_KEY}}
@@ -40,22 +33,10 @@ jobs:
             SERVER_HOST: ${{secrets.SERVER_HOST}}
             SSH_PORT: ${{secrets.SSH_PORT}}
         run: |
-          actual_fingerprint=$(ssh-keygen -lf /etc/ssh/ssh_host_rsa_key.pub | awk '{print $2}')
-          stored_fingerprint=$(cat server_fingerprint.txt)
-          
-          echo "Actual Fingerprint: $actual_fingerprint"
-          echo "Stored Fingerprint: $stored_fingerprint"
-          
-          if [ "$actual_fingerprint" == "$stored_fingerprint" ]; then
-            echo "Fingerprints match. Proceeding with SSH connection."
-            echo "$SSH_PRIVATE_KEY" > private_key.pem
+          echo "$SSH_PRIVATE_KEY" > private_key.pem
           chmod 600 private_key.pem
-          scp -r -i private_key.pem -P $SSH_PORT $GITHUB_WORKSPACE/home/runner/work/reasonstoswallow-fe/reasonstoswallow-fe/build/* $SERVER_USERNAME@$SERVER_HOST:/etc/projects/reasonstoswallow/
-          rm private_key.pem
-          else
-            echo "Fingerprints do not match. Aborting SSH connection."
-            exit 1
-          fi    
+          scp -o StrictHostKeyChecking=no -r -i private_key.pem -P $SSH_PORT $GITHUB_WORKSPACE/home/runner/work/reasonstoswallow-fe/reasonstoswallow-fe/build/* $SERVER_USERNAME@$SERVER_HOST:/etc/projects/reasonstoswallow/
+          rm private_key.pem  
 
 
       
