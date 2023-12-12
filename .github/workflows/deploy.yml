@@ -28,7 +28,7 @@ jobs:
 
       - name: Deploy to prod
         run: |
-          scp -r $GITHUB_WORKSPACE/home/runner/work/reasonstoswallow-fe/reasonstoswallow-fe/build/* ${secrets.SERVER_USERNAME}@${secrets.SERVER_HOST}:${{secrets.SSH_PORT}}/etc/projects/reasonstoswallow/
+          scp -r $GITHUB_WORKSPACE/home/runner/work/reasonstoswallow-fe/reasonstoswallow-fe/build/* $SERVER_USERNAME@$SERVER_HOST:$SSH_PORT/etc/projects/reasonstoswallow/
           env:
             SSH_PRIVATE_KEY: ${{secrets.SSH_PRIVATE_KEY}}
       
