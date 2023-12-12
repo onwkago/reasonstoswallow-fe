@@ -27,10 +27,17 @@ jobs:
         run: ls -a -R $GITHUB_WORKSPACE
 
       - name: Deploy to prod
-        run: |
-          scp -r $GITHUB_WORKSPACE/home/runner/work/reasonstoswallow-fe/reasonstoswallow-fe/build/* $SERVER_USERNAME@$SERVER_HOST:$SSH_PORT/etc/projects/reasonstoswallow/
-          env:
+        env:
             SSH_PRIVATE_KEY: ${{secrets.SSH_PRIVATE_KEY}}
+            SERVER_USERNAME: ${{secrets.SERVER_USERNAME}}
+            SERVER_HOST: ${{secrets.SERVER_HOST}}
+            SSH_PORT: ${{secrets.SSH_PORT}}
+        run: |
+          echo "$SSH_PRIVATE_KEY" > private_key.pem
+          chmod 600 private_key.pem
+          scp -r -i private_key.pem -P $SSH_PORT $GITHUB_WORKSPACE/home/runner/work/reasonstoswallow-fe/reasonstoswallow-fe/build/* $SERVER_USERNAME@$SERVER_HOST:/etc/projects/reasonstoswallow/
+          rm private_key.pem
+
       
           
           
