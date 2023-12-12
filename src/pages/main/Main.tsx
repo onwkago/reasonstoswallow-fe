@@ -8,7 +8,7 @@ const Main: React.FC = () => (
         <div className={"body-container"}>
             {
                 reasons.map((reason) =>
-                    <Article id={reason.id} title={reason.title} description={reason.description}/>
+                    <Article key= {reason.id } id={reason.id} title={reason.title} description={reason.description}/>
                 )
             }
         </div>

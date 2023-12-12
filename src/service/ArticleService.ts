@@ -1,3 +1,5 @@
+
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 const cumShotBenefits: string[]  = [
     "Cum swallowing: Enhance muscle repair and growth after exercise. They provide a convenient, portable protein solution.",
     "Amino acids in Cum Shots contribute to overall health and meet daily protein requirements. Regular consumption can optimize workout performance.",

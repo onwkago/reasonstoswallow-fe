@@ -28,7 +28,8 @@ const ConvinceMe: React.FC = () => {
                     className={"article-button"}
                     variant="light"
                     onClick={handleClick}>
-                    I'm still not convinced
+
+                    I&lsquo;m still not convinced
                 </Button>
             </Body>
         </React.Fragment>

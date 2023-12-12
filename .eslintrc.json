@@ -1,0 +1,18 @@
+{
+  "parser": "@typescript-eslint/parser",
+  "plugins": ["@typescript-eslint"],
+  "extends": [
+    "eslint:recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:react/recommended"
+    // Add other configurations or plugins you need
+  ],
+  "rules": {
+    // Specify your rules here
+  },
+  "settings": {
+    "react": {
+      "version": "detect"
+    }
+  }
+}
