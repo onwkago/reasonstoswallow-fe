@@ -9,22 +9,22 @@ jobs:
     runs-on: ubuntu-latest
     
     steps:
-      # - name: Checkout main branch
-      #   uses: actions/checkout@v2
+      - name: Checkout main branch
+        uses: actions/checkout@v2
 
-      # - name: Setup node.js
-      #   uses: actions/setup-node@v2
-      #   with:
-      #     node-version: 14
+      - name: Setup node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: 14
 
-      # - name: Install dependencies
-      #   run: npm install
+      - name: Install dependencies
+        run: npm install
 
-      # - name: Build application
-      #   run: npm run build
+      - name: Build application
+        run: npm run build
 
-      # - name: Copy Build Files
-      #   run: ls -a -R $GITHUB_WORKSPACE
+      - name: Copy Build Files
+        run: ls -a -R $GITHUB_WORKSPACE
   
       - name: Deploy to prod
         env:
@@ -35,5 +35,5 @@ jobs:
         run: |
           echo "$SSH_PRIVATE_KEY" > private_key.pem
           chmod 600 private_key.pem
-          scp  -o StrictHostKeyChecking=no -r -i private_key.pem -P $SSH_PORT $GITHUB_WORKSPACE/home/runner/work/reasonstoswallow-fe/reasonstoswallow-fe/build/* $SERVER_USERNAME@$SERVER_HOST:/etc/projects/reasonstoswallow/
+          scp -o StrictHostKeyChecking=no -r -i private_key.pem -P $SSH_PORT $GITHUB_WORKSPACE/home/runner/work/reasonstoswallow-fe/reasonstoswallow-fe/build/* $SERVER_USERNAME@$SERVER_HOST:/etc/projects/reasonstoswallow/
           rm private_key.pem  
