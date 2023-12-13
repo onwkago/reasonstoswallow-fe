@@ -9,22 +9,22 @@ jobs:
     runs-on: ubuntu-latest
     
     steps:
-      # - name: Checkout main branch
-      #   uses: actions/checkout@v2
+      - name: Checkout main branch
+        uses: actions/checkout@v2
 
-      # - name: Setup node.js
-      #   uses: actions/setup-node@v2
-      #   with:
-      #     node-version: 14
+      - name: Setup node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: 14
 
-      # - name: Install dependencies
-      #   run: npm install
+      - name: Install dependencies
+        run: npm install
 
-      # - name: Build application
-      #   run: npm run build
+      - name: Build application
+        run: npm run build
 
-      # - name: Copy Build Files
-      #   run: ls -a -R $GITHUB_WORKSPACE
+      - name: Copy Build Files
+        run: ls -a -R $GITHUB_WORKSPACE
       - name: Configure SSH
         run: |
           mkdir -p ~/.ssh/
