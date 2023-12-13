@@ -52,5 +52,5 @@ jobs:
         run: |
           echo "$SSH_PRIVATE_KEY" > private_key.pem
           chmod 600 private_key.pem
-          ssh prod 'echo GOOD JOB!'
+          ssh prod -v 'echo GOOD JOB!'
           rm private_key.pem  
