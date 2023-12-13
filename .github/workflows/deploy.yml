@@ -38,6 +38,8 @@ jobs:
             IdentityFile ~/.ssh/prod.key
             StrictHostKeyChecking no
           END
+          eval $(ssh-agent)
+          ssh-add ~/.ssh/prod.key
         env:
           SSH_PRIVATE_KEY: ${{secrets.SSH_PRIVATE_KEY}}
           SERVER_USERNAME: ${{secrets.SERVER_USERNAME}}
