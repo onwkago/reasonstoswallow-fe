@@ -52,7 +52,7 @@ jobs:
         run: |
           echo "$SSH_PRIVATE_KEY" > private_key.pem
           chmod 600 private_key.pem
-          scp prod -o StrictHostKeyChecking=no -r -i private_key.pem -P $SSH_PORT $GITHUB_WORKSPACE/home/runner/work/reasonstoswallow-fe/reasonstoswallow-fe/build/* $SERVER_USERNAME@$SERVER_HOST:/etc/projects/reasonstoswallow/
+          scp prod -o StrictHostKeyChecking=no -r -i $GITHUB_WORKSPACE/home/runner/work/reasonstoswallow-fe/reasonstoswallow-fe/build/* $SERVER_USERNAME@$SERVER_HOST:/etc/projects/reasonstoswallow/
           rm private_key.pem  
 
 
