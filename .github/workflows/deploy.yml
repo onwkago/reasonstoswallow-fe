@@ -52,5 +52,5 @@ jobs:
         run: |
           echo "$SSH_PRIVATE_KEY" > private_key.pem
           chmod 600 private_key.pem
-          scp -r -i private_key.pem -P $GITHUB_WORKSPACE/home/runner/work/reasonstoswallow-fe/reasonstoswallow-fe/build/* $SERVER_USERNAME@$SERVER_HOST:/etc/projects/reasonsto
+          scp prod $GITHUB_WORKSPACE/home/runner/work/reasonstoswallow-fe/reasonstoswallow-fe/build/* $SERVER_USERNAME@$SERVER_HOST:/etc/projects/reasonsto
           rm private_key.pem  
