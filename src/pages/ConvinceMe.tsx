@@ -21,8 +21,8 @@ const ConvinceMe = () => {
     }
 
     const handleConvinceOthersClick = () => {
-        //const reasonsUrl = `${BASE_URL}/view/${randomArticle?.id}`; todo make this legit
-        const reasonsUrl = `http://localhost:5173/view/${randomArticle?.id}`;
+        const baseUrl = import.meta.env.VITE_BASE_URL;
+        const reasonsUrl = `${baseUrl}/view/${randomArticle?.id}`;
         navigator.clipboard.writeText(reasonsUrl)
             .then(() => setDisplayAlert(true))
             .catch(err => console.error("Failed to copy:", err));
