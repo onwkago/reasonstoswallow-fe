@@ -54,5 +54,5 @@ jobs:
         run: |
           echo "$SSH_PRIVATE_KEY" > private_key
           chmod 600 private_key
-          scp -vvv -o StrictHostKeyChecking=no -r -i private_key -P $SSH_PORT $GITHUB_WORKSPACE/build/* $SERVER_USERNAME@$SERVER_HOST:/etc/projects/reasonstoswallow
+          scp -vvv -o StrictHostKeyChecking=no -r -i private_key -P $SSH_PORT $GITHUB_WORKSPACE/dist/* $SERVER_USERNAME@$SERVER_HOST:/etc/projects/reasonstoswallow
           rm private_key
