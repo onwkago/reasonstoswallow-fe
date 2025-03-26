@@ -7,7 +7,7 @@ export const PageContainer = styled(Box)`
     flex-direction: column;
     padding: 0 12.5%;
     background-color: ${ColorsILiked.PrimaryAlmostWhite};
-    min-height: 80vh;
+    min-height: 85vh;
 
     @media (max-width: 768px) {
         padding: 24px;
