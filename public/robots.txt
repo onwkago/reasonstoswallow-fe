@@ -1,0 +1,4 @@
+User-agent: *
+Disallow:
+
+Sitemap: https://reasonstoswallow.com/sitemap.xml
